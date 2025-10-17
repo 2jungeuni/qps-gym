@@ -4,8 +4,9 @@
 
 <p align="center">
 <img src="./image/qps.PNG" width="400" height="280" />
-<em>Reference : https://www.interlakemecalux.com/blog/picking-systems</em>
 </p>
+Image reference : https://www.interlakemecalux.com/blog/picking-systems
+
 ---
 <h2>Overview</h2>
 It is a Python-based simulator that models a sequential processing system found in logistic centers, such as a QPS (Quick Picking System).
@@ -42,7 +43,7 @@ python3 run.py --dataset <DATASET_FILE_PATH> --gui <ENABLE_GUI_MODE>
 ```
 When running in GUI mode, the following screen will appear.
 <p align="center">
-<img src="./image/qps_gym_img.PNG" width="600" height="280" />
+<img src="./image/qps_gym_img.PNG" width="1200" height="360" />
 </p>
 Upon execution, a Pygame window will appear, and the simulation will start in a `PAUSED` state, awaiting user interaction.
 
