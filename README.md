@@ -1,5 +1,5 @@
 <p align="center">
-<h2 align="center">Quick Picking System (QPS) Simulator and Reinforcement Learning Environment</h2>
+<h1 align="center">Quick Picking System (QPS) Simulator and Reinforcement Learning Environment</h1>
 </p>
 
 <p align="center">
@@ -71,7 +71,7 @@ Once the Pygame window opens, you can interact with the simulation using the fol
 
 <h2>Code Components</h2>
 
-<h3>```LogisticsQPSSimulator```</h3>
+<h3>LogisticsQPSSimulator</h3>
 
 - **Role**: This class manages the core logic of the simulation.
 - **Key Functions**
@@ -80,7 +80,7 @@ Once the Pygame window opens, you can interact with the simulation using the fol
   - Handles key events such as invoice injection, station arrival, task completion, and bypasses.
   - Provides a snapshot of the current simulation state for the renderer and RL environment.
   
-<h3>```LogisticsQPSRenderer```</h3>
+<h3>LogisticsQPSRenderer</h3>
 
 - **Role**: Visualizes the state information received from the ```LogisticsQPSSimulator``` using Pygame.
 - **Key Functions**
@@ -89,7 +89,7 @@ Once the Pygame window opens, you can interact with the simulation using the fol
   - Handles user input (mouse clicks) for controlling the simulation (play, pause, etc.) and displaying detailed information panels.
   - Dynamically displays panels for a global simulation summary, detailed station info, or detailed invoice info.
 
-<h3>```LogisticsQPSEnv```</h3>
+<h3>LogisticsQPSEnv</h3>
 
 - **Role**: Wraps the simulator into a standard reinforcement learning environment **compliant with the OpenAI Gymnasium API**.
 - **Main Components**
@@ -98,7 +98,7 @@ Once the Pygame window opens, you can interact with the simulation using the fol
   - ```step(action)```: Takes an action (injecting an invoice) from the agent, advances the simulator, and returns the reward and the next observation.
   - ```reset()```: Resets the simulation for a new episode. This calls ```generate_mock_logistics_output``` to create a new problem scenario.
 
-<h3>```generate_mock_logistics_output```</h3>
+<h3>generate_mock_logistics_output</h3>
 
 - **Role**: A utility function that generates mock static assignment data for the simulation.
 - **Functionality**: It randomly defines the number of stations, SKUs, and invoices. It then assigns each SKU to a station and groups SKUs to form invoice clusters, providing a new simulation scenario for each episode.
