@@ -54,6 +54,7 @@ Upon execution, a Pygame window will appear, and the simulation will start in a 
 ---
 <h2>How to Use the Simulator</h2>
 Once the Pygame window opens, you can interact with the simulation using the following controls.
+
 - ▶ **Play**: Runs the simulation automatically. In the demo, an agent makes random valid choices to inject pending invoices.
 - ❚❚ **Pause**: Pause the simulation.
 - << **Reset**: <span style="color:red">(Active only when paused)</span> Resets the current simulation and generates a new problem scenario.
