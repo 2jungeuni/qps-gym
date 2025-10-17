@@ -34,16 +34,20 @@ You need the following libraries to run the project.
 - ```gymnasium```: For the reinforcement learning environment structure.
 - ```numpy```: For numerical operations.
 - ```pandas```: For data handling.
+
 ```python
 pip install pygame gymnasium numpy pandas
 ```
+
 <h3>Execution</h3>
+
 ```python
 python3 run.py --dataset <DATASET_FILE_PATH> --gui <ENABLE_GUI_MODE>
 ```
+
 When running in GUI mode, the following screen will appear.
 <p align="center">
-<img src="./image/qps_gym_img.PNG" width="1200" height="360" />
+<img src="./image/qps_gym_img.PNG" width="1200" height="400" />
 </p>
 Upon execution, a Pygame window will appear, and the simulation will start in a `PAUSED` state, awaiting user interaction.
 
@@ -59,9 +63,13 @@ Once the Pygame window opens, you can interact with the simulation using the fol
   - **On Station Click**: Shows the station's Zone code, initial SKU capacity, total assigned workload, and a list of remaining SKUs to be processed.
   - **On Invoice Click**: Shows the invoice's planned route and the list of SKUs to be processed at each station.
   - When nothing is selected, the panel displays a global summary of the simulation.
+
 ---
+
 <h2>Code Components</h2>
+
 <h3>```LogisticsQPSSimulator```</h3>
+
 - **Role**: This class manages the core logic of the simulation.
 - **Key Functions**
   - Manages time using a discrete-event simulation approach (with an event heap).
@@ -70,6 +78,7 @@ Once the Pygame window opens, you can interact with the simulation using the fol
   - Provides a snapshot of the current simulation state for the renderer and RL environment.
   
 <h3>```LogisticsQPSRenderer```</h3>
+
 - **Role**: Visualizes the state information received from the ```LogisticsQPSSimulator``` using Pygame.
 - **Key Functions**
   - Draws stations, queues, and invoice boxes on the screen.
@@ -78,6 +87,7 @@ Once the Pygame window opens, you can interact with the simulation using the fol
   - Dynamically displays panels for a global simulation summary, detailed station info, or detailed invoice info.
 
 <h3>```LogisticsQPSEnv```</h3>
+
 - **Role**: Wraps the simulator into a standard reinforcement learning environment **compliant with the OpenAI Gymnasium API**.
 - **Main Components**
   - **Action Space**: A discrete space (```spaces.Discrete```) for selecting the ID of the next invoice cluster to inject.
@@ -86,5 +96,6 @@ Once the Pygame window opens, you can interact with the simulation using the fol
   - ```reset()```: Resets the simulation for a new episode. This calls ```generate_mock_logistics_output``` to create a new problem scenario.
 
 <h3>```generate_mock_logistics_output```</h3>
+
 - **Role**: A utility function that generates mock static assignment data for the simulation.
 - **Functionality**: It randomly defines the number of stations, SKUs, and invoices. It then assigns each SKU to a station and groups SKUs to form invoice clusters, providing a new simulation scenario for each episode.
