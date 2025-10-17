@@ -20,6 +20,7 @@ The Pygame-based visualizer allows for intuitive monitoring and interaction with
 
 ---
 <h2>Key Features</h2>
+
 - ⛓️ **Sequential Processing System Modeling**: Simulates invoice clusters moving through a fixed route of stations, completing tasks one by one in sequence.
 - 📦 **Dynamic Inventory Tracking**: Monitors the remaining SKUs at each station in real time and decreases the count whenever a task is finished.
 - 🚦 **Station Overload and Bypass Logic**: If a station queue is full, incoming invoice clusters bypass it and return later, reflecting real-world system constraints.
@@ -30,6 +31,7 @@ The Pygame-based visualizer allows for intuitive monitoring and interaction with
 <h2>How to Run</h2>
 <h3>Prerequisites</h3>
 You need the following libraries to run the project.
+
 - ```pygame```: For the visual renderer.
 - ```gymnasium```: For the reinforcement learning environment structure.
 - ```numpy```: For numerical operations.
